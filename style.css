@@ -74,6 +74,12 @@ header::before {
   opacity: 0.9;
 }
 
+.header-subtitle.small {
+  font-size: 0.8rem;
+  color: var(--gray-color);
+  opacity: 1;
+}
+
 /* Projects Grid */
 .projects-section {
   margin-top: -60px;
