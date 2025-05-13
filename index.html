@@ -1,87 +1,279 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bro Code</title>
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div class="counter-wrap">
-      <h1>This is a test</h1>
-      <p class="counter">0</p>
-      <button class="descrease">Decrease</button>
-      <button class="reset">Reset</button>
-      <button class="increase">Increase</button>
-      <link rel="stylesheet" href="style.css" />
-    </div>
-    <div class="ifs">
-      <p class="out-put">This is the result</p>
-    </div>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inverted Border Radius</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0;
-      }
-      /* 
-      .inverted-border-radius {
-        width: 300px;
-        height: 400px;
-        background-color: black;
-        border-radius: 20px 20px 20px 0;
-        position: relative;
-      }
-
-      .inverted-border-radius::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 20px;
-        height: 20px;
-        background-color: transparent;
-        box-shadow: 10px 10px 0 0 #f0f0f0;
-      } */
-
-      .inverted-radius {
-        width: 300px;
-        height: 400px;
-        background-color: #222;
-        border-radius: 20px;
-        border: 1px solid green;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .inverted-radius::after {
-        content: "";
-        position: absolute;
-        bottom: -1px; /* Align exactly with the border */
-        right: -1px; /* Align exactly with the border */
-        width: 60px;
-        height: 60px;
-        background-color: #000; /* Match page background */
-        border-top-left-radius: 20px;
-        border: 1px solid green;
-        border-bottom: none;
-        border-right: none;
-      }
-    </style>
+    <title>My Web Projects Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="inverted-radius"></div>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <h1 class="header-title">My Web Projects Portfolio</h1>
+          <p class="header-subtitle">
+            A collection of interactive web applications built with HTML, CSS,
+            and JavaScript
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="projects-section">
+      <div class="container">
+        <div class="projects-grid">
+          <!-- Calculator -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%233a86ff\' opacity=\'0.1\'/%3E%3Crect x=\'75\' y=\'35\' width=\'150\' height=\'110\' rx=\'10\' fill=\'white\' stroke=\'%233a86ff\' stroke-width=\'2\'/%3E%3Crect x=\'85\' y=\'45\' width=\'130\' height=\'25\' rx=\'5\' fill=\'%23f8f9fa\'/%3E%3Ccircle cx=\'105\' cy=\'90\' r=\'10\' fill=\'%238338ec\' opacity=\'0.7\'/%3E%3Ccircle cx=\'135\' cy=\'90\' r=\'10\' fill=\'%238338ec\' opacity=\'0.7\'/%3E%3Ccircle cx=\'165\' cy=\'90\' r=\'10\' fill=\'%238338ec\' opacity=\'0.7\'/%3E%3Ccircle cx=\'195\' cy=\'90\' r=\'10\' fill=\'%23ff006e\' opacity=\'0.7\'/%3E%3Ccircle cx=\'105\' cy=\'120\' r=\'10\' fill=\'%238338ec\' opacity=\'0.7\'/%3E%3Ccircle cx=\'135\' cy=\'120\' r=\'10\' fill=\'%238338ec\' opacity=\'0.7\'/%3E%3Ccircle cx=\'165\' cy=\'120\' r=\'10\' fill=\'%238338ec\' opacity=\'0.7\'/%3E%3Ccircle cx=\'195\' cy=\'120\' r=\'10\' fill=\'%23ff006e\' opacity=\'0.7\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">Interactive</span>
+              <h3 class="card-title">Calculator</h3>
+              <p class="card-description">
+                A sleek and elegant calculator with a glass morphism design.
+                Perform basic arithmetic operations with style.
+              </p>
+              <a href="calculator/index.html" class="card-link">View Project</a>
+            </div>
+          </div>
+
+          <!-- Dice Roller -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%23fb8500\' opacity=\'0.1\'/%3E%3Crect x=\'110\' y=\'50\' width=\'80\' height=\'80\' rx=\'10\' fill=\'white\' stroke=\'%23fb8500\' stroke-width=\'2\'/%3E%3Ccircle cx=\'128\' cy=\'68\' r=\'8\' fill=\'%23fb8500\'/%3E%3Ccircle cx=\'172\' cy=\'112\' r=\'8\' fill=\'%23fb8500\'/%3E%3Ccircle cx=\'128\' cy=\'112\' r=\'8\' fill=\'%23fb8500\'/%3E%3Ccircle cx=\'172\' cy=\'68\' r=\'8\' fill=\'%23fb8500\'/%3E%3Ccircle cx=\'150\' cy=\'90\' r=\'8\' fill=\'%23fb8500\'/%3E%3Crect x=\'160\' y=\'90\' width=\'60\' height=\'60\' rx=\'8\' transform=\'rotate(15, 190, 120)\' fill=\'white\' stroke=\'%23fb8500\' stroke-width=\'2\' opacity=\'0.7\'/%3E%3Ccircle cx=\'184\' cy=\'123\' r=\'6\' fill=\'%23fb8500\' opacity=\'0.7\'/%3E%3Ccircle cx=\'196\' cy=\'117\' r=\'6\' fill=\'%23fb8500\' opacity=\'0.7\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">Fun Game</span>
+              <h3 class="card-title">Dice Roller</h3>
+              <p class="card-description">
+                A sleek, interactive dice simulator that generates random rolls,
+                perfect for board games and tabletop RPGs.
+              </p>
+              <a href="dice-roller/index.html" class="card-link"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Digital Clock -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%233a86ff\' opacity=\'0.2\'/%3E%3Ccircle cx=\'150\' cy=\'90\' r=\'70\' stroke=\'%233a86ff\' stroke-width=\'8\' fill=\'none\'/%3E%3Cline x1=\'150\' y1=\'90\' x2=\'150\' y2=\'40\' stroke=\'%23ff006e\' stroke-width=\'4\' stroke-linecap=\'round\'/%3E%3Cline x1=\'150\' y1=\'90\' x2=\'190\' y2=\'90\' stroke=\'%238338ec\' stroke-width=\'4\' stroke-linecap=\'round\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">HTML & CSS</span>
+              <h3 class="card-title">Digital Clock</h3>
+              <p class="card-description">
+                An elegant and responsive digital clock that displays the
+                current time and date with a beautiful animated background.
+              </p>
+              <a href="digital-clock/index.html" class="card-link"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Image Carousel -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%238338ec\' opacity=\'0.1\'/%3E%3Crect x=\'65\' y=\'50\' width=\'170\' height=\'80\' rx=\'5\' fill=\'white\' stroke=\'%238338ec\' stroke-width=\'2\'/%3E%3Crect x=\'75\' y=\'60\' width=\'150\' height=\'60\' rx=\'3\' fill=\'%23f8f9fa\'/%3E%3Cpolygon points=\'85,90 95,75 115,100 135,80 155,100 185,65\' fill=\'none\' stroke=\'%233a86ff\' stroke-width=\'2\'/%3E%3Ccircle cx=\'100\' cy=\'70\' r=\'5\' fill=\'%23ff006e\'/%3E%3Cpolygon points=\'50,90 60,90 55,100\' fill=\'%233a86ff\'/%3E%3Cpolygon points=\'250,90 240,90 245,100\' fill=\'%233a86ff\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">Animation</span>
+              <h3 class="card-title">Image Carousel</h3>
+              <p class="card-description">
+                A beautiful image slider with smooth transitions, navigation
+                controls, and responsive design for showcasing images.
+              </p>
+              <a href="image-slider/index.html" class="card-link"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Password generator -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%23023047\' opacity=\'0.1\'/%3E%3Crect x=\'75\' y=\'60\' width=\'150\' height=\'60\' rx=\'5\' fill=\'white\' stroke=\'%23023047\' stroke-width=\'2\'/%3E%3Ctext x=\'95\' y=\'100\' font-family=\'monospace\' font-size=\'20\' fill=\'%23023047\'%3EP%23%40%24%24w%3F%3C/text%3E%3Crect x=\'115\' y=\'40\' width=\'70\' height=\'40\' rx=\'20\' fill=\'white\' stroke=\'%23023047\' stroke-width=\'2\'/%3E%3Ccircle cx=\'135\' cy=\'60\' r=\'8\' fill=\'%23023047\'/%3E%3Ccircle cx=\'150\' cy=\'60\' r=\'8\' fill=\'%23023047\'/%3E%3Ccircle cx=\'165\' cy=\'60\' r=\'8\' fill=\'%23023047\'/%3E%3Cpath d=\'M110,90 L95,130 M120,90 L135,130 M140,90 L125,130 M160,90 L175,130 M180,90 L165,130\' stroke=\'%23023047\' stroke-width=\'1.5\' stroke-dasharray=\'3,3\' opacity=\'0.5\'/%3E%3Cpath d=\'M100,140 a1,1 0 0,0 100,0\' fill=\'none\' stroke=\'%23023047\' stroke-width=\'2\' opacity=\'0.5\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">JavaScript</span>
+              <h3 class="card-title">Password Generator</h3>
+              <p class="card-description">
+                A secure tool that creates strong, customizable passwords with
+                special characters, numbers, and various length options to
+                enhance your online security.
+              </p>
+              <a href="password-generator/index.html" class="card-link"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Biology Quiz -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%232e7d32\' opacity=\'0.1\'/%3E%3Ccircle cx=\'150\' cy=\'90\' r=\'50\' fill=\'none\' stroke=\'%232e7d32\' stroke-width=\'2\'/%3E%3Cpath d=\'M120,90 Q150,60 180,90 M120,90 Q150,120 180,90\' fill=\'none\' stroke=\'%232e7d32\' stroke-width=\'2\'/%3E%3Ccircle cx=\'135\' cy=\'80\' r=\'5\' fill=\'%232e7d32\'/%3E%3Ccircle cx=\'165\' cy=\'80\' r=\'5\' fill=\'%232e7d32\'/%3E%3Cpath d=\'M120,105 Q135,115 150,105 Q165,115 180,105\' fill=\'none\' stroke=\'%232e7d32\' stroke-width=\'2\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">Educational</span>
+              <h3 class="card-title">Biology Quiz</h3>
+              <p class="card-description">
+                A beautifully designed biology quiz application with multiple
+                categories and an elegant interface for testing knowledge.
+              </p>
+              <a href="quiz/index.html" class="card-link">View Project</a>
+            </div>
+          </div>
+
+          <!-- Biology Quiz -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%239d4edd\' opacity=\'0.1\'/%3E%3Cpolygon points=\'90,50 130,50 110,90\' fill=\'white\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3Ctext x=\'107\' y=\'70\' font-family=\'sans-serif\' font-size=\'12\' text-anchor=\'middle\' fill=\'%239d4edd\'%3EA%3C/text%3E%3Crect x=\'145\' y=\'50\' width=\'40\' height=\'40\' fill=\'white\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3Ctext x=\'165\' y=\'75\' font-family=\'sans-serif\' font-size=\'12\' text-anchor=\'middle\' fill=\'%239d4edd\'%3EA%3C/text%3E%3Ccircle cx=\'90\' cy=\'120\' r=\'25\' fill=\'white\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3Ctext x=\'90\' y=\'125\' font-family=\'sans-serif\' font-size=\'12\' text-anchor=\'middle\' fill=\'%239d4edd\'%3Eπr²%3C/text%3E%3Cpath d=\'M145,95 L185,95 L185,145 L165,125 L145,145 Z\' fill=\'white\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3Cline x1=\'200\' y1=\'60\' x2=\'220\' y2=\'60\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3Cline x1=\'200\' y1=\'70\' x2=\'220\' y2=\'70\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3Cline x1=\'200\' y1=\'80\' x2=\'210\' y2=\'80\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3Cline x1=\'200\' y1=\'110\' x2=\'220\' y2=\'110\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3Cline x1=\'200\' y1=\'120\' x2=\'220\' y2=\'120\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3Cline x1=\'200\' y1=\'130\' x2=\'210\' y2=\'130\' stroke=\'%239d4edd\' stroke-width=\'2\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">Educational</span>
+              <h3 class="card-title">Shape Calculator</h3>
+              <p class="card-description">
+                A practical geometry tool that calculates area, perimeter, and
+                other properties of various shapes, with a clean interface and
+                step-by-step calculation display.
+              </p>
+              <a href="shape-calculator/index.html" class="card-link"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Stopwatch -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%238338ec\' opacity=\'0.2\'/%3E%3Ccircle cx=\'150\' cy=\'90\' r=\'70\' stroke=\'%238338ec\' stroke-width=\'8\' fill=\'none\'/%3E%3Ccircle cx=\'150\' cy=\'90\' r=\'5\' fill=\'%23ff006e\'/%3E%3Cline x1=\'150\' y1=\'90\' x2=\'180\' y2=\'50\' stroke=\'%23ff006e\' stroke-width=\'4\' stroke-linecap=\'round\'/%3E%3Crect x=\'145\' y=\'30\' width=\'10\' height=\'10\' fill=\'%238338ec\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">JavaScript</span>
+              <h3 class="card-title">Stopwatch</h3>
+              <p class="card-description">
+                A feature-rich stopwatch with start, stop, and reset
+                functionality. Track time with precision down to milliseconds.
+              </p>
+              <a href="stopwatch/index.html" class="card-link">View Project</a>
+            </div>
+          </div>
+
+          <!-- Temperature Converter -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%23ef476f\' opacity=\'0.1\'/%3E%3Ccircle cx=\'125\' cy=\'90\' r=\'45\' fill=\'white\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Cpath d=\'M125,60 L125,120\' stroke=\'%23ef476f\' stroke-width=\'4\'/%3E%3Ccircle cx=\'125\' cy=\'126\' r=\'14\' fill=\'%23ef476f\' opacity=\'0.3\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Cpath d=\'M110,60 L140,60\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Cpath d=\'M110,75 L130,75\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Cpath d=\'M110,90 L130,90\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Cpath d=\'M110,105 L130,105\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Ctext x=\'112\' y=\'65\' font-family=\'sans-serif\' font-size=\'9\' fill=\'%23ef476f\'%3E°C%3C/text%3E%3Cpath d=\'M175,90 L215,90\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Cpath d=\'M195,70 L195,110\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Cpath d=\'M180,75 L190,85 L200,75 L210,85\' fill=\'none\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Cpath d=\'M180,105 L190,95 L200,105 L210,95\' fill=\'none\' stroke=\'%23ef476f\' stroke-width=\'2\'/%3E%3Ctext x=\'225\' y=\'65\' font-family=\'sans-serif\' font-size=\'9\' fill=\'%23ef476f\'%3E°F%3C/text%3E%3Ctext x=\'225\' y=\'120\' font-family=\'sans-serif\' font-size=\'9\' fill=\'%23ef476f\'%3E°K%3C/text%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">Health</span>
+              <h3 class="card-title">Temperature Converter</h3>
+              <p class="card-description">
+                A streamlined utility that quickly converts between Celsius and
+                Fahrenheit temperature scales with an intuitive interface and
+                instant results.
+              </p>
+              <a href="temp-converter/index.html" class="card-link"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Todo List -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%23ff006e\' opacity=\'0.1\'/%3E%3Crect x=\'70\' y=\'45\' width=\'160\' height=\'90\' rx=\'5\' fill=\'white\' stroke=\'%23ff006e\' stroke-width=\'2\'/%3E%3Cline x1=\'90\' y1=\'65\' x2=\'210\' y2=\'65\' stroke=\'%238338ec\' stroke-width=\'2\'/%3E%3Cline x1=\'90\' y1=\'85\' x2=\'190\' y2=\'85\' stroke=\'%238338ec\' stroke-width=\'2\'/%3E%3Cline x1=\'90\' y1=\'105\' x2=\'170\' y2=\'105\' stroke=\'%238338ec\' stroke-width=\'2\'/%3E%3Crect x=\'75\' y=\'63\' width=\'10\' height=\'10\' rx=\'2\' fill=\'%233a86ff\'/%3E%3Crect x=\'75\' y=\'83\' width=\'10\' height=\'10\' rx=\'2\' fill=\'%233a86ff\'/%3E%3Crect x=\'75\' y=\'103\' width=\'10\' height=\'10\' rx=\'2\' fill=\'%233a86ff\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">UI Design</span>
+              <h3 class="card-title">Todo List App</h3>
+              <p class="card-description">
+                An elegant task management application that helps you organize
+                your tasks with a clean and intuitive interface.
+              </p>
+              <a href="todo-list/index.html" class="card-link">View Project</a>
+            </div>
+          </div>
+
+          <!-- Weather App -->
+          <div class="project-card">
+            <div class="card-image">
+              <div
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 180\'%3E%3Crect width=\'300\' height=\'180\' fill=\'%23ff006e\' opacity=\'0.1\'/%3E%3Ccircle cx=\'90\' cy=\'90\' r=\'25\' fill=\'%23ffbe0b\'/%3E%3Cpath d=\'M160,70 Q175,60 190,70 Q210,70 215,85 Q235,85 240,95 Q245,105 240,110 Q235,115 215,115 Q205,115 190,115 Q175,115 160,115 Q145,115 140,110 Q135,105 140,95 Q145,85 160,70 Z\' fill=\'white\' stroke=\'%233a86ff\' stroke-width=\'2\'/%3E%3Cpath d=\'M180,115 L175,130 M190,115 L195,130 M160,115 L155,130 M200,115 L205,130\' stroke=\'%233a86ff\' stroke-width=\'2\' stroke-linecap=\'round\'/%3E%3C/svg%3E');
+                "
+              ></div>
+            </div>
+            <div class="card-content">
+              <span class="card-tag">API Integration</span>
+              <h3 class="card-title">Weather App</h3>
+              <p class="card-description">
+                A beautifully designed weather application that fetches
+                real-time weather data for any location using the OpenWeatherMap
+                API.
+              </p>
+              <a href="weather/index.html" class="card-link">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p class="footer-text">
+          © 2025 My Web Projects Portfolio. Built with
+          <span class="highlight">❤</span> and modern web technologies.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
