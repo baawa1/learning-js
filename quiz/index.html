@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biology Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div class="header">
+        <h1>Biology Quiz</h1>
+        <p>Test your knowledge of biology</p>
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="welcome-screen active">
+          <div class="welcome-illustration"></div>
+          <h2>Welcome to the Biology Quiz!</h2>
+          <p>
+            Challenge yourself with questions on various biology topics. Select
+            a category below and test your knowledge.
+          </p>
+
+          <div class="category-selector">
+            <button class="category-btn active" data-category="all">
+              All Topics
+            </button>
+            <button class="category-btn" data-category="cell">
+              Cell Biology
+            </button>
+            <button class="category-btn" data-category="genetics">
+              Genetics
+            </button>
+            <button class="category-btn" data-category="ecology">
+              Ecology
+            </button>
+            <button class="category-btn" data-category="anatomy">
+              Human Anatomy
+            </button>
+          </div>
+
+          <button id="start-btn" class="btn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="quiz-screen">
+          <div class="category-title" id="category-title">All Topics</div>
+          <div id="question-container">
+            <p class="question" id="question">Question text will appear here</p>
+            <div class="options" id="options-container">
+              <!-- Options will be added dynamically by JavaScript -->
+            </div>
+          </div>
+
+          <div class="navigation">
+            <button id="prev-btn" class="btn btn-secondary" disabled>
+              Previous
+            </button>
+            <button id="next-btn" class="btn">Next</button>
+          </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="result-screen">
+          <h2>Quiz Completed!</h2>
+          <div class="score-container">
+            <div class="score" id="final-score">0%</div>
+          </div>
+          <p class="result-message" id="result-message">
+            Your result message will appear here.
+          </p>
+
+          <div class="action-buttons">
+            <button id="review-btn" class="btn">Review Answers</button>
+            <button id="restart-btn" class="btn">Try Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

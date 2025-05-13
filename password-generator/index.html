@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Secure Password Generator</h1>
+        <p>Create strong, unique passwords to keep your accounts safe</p>
+      </div>
+
+      <div class="result-container">
+        <span id="result" class="result"></span>
+        <button id="clipboard" class="btn-copy" title="Copy to clipboard">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path
+              d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="settings">
+        <div class="setting">
+          <label for="length" class="setting-label">Password Length</label>
+          <div class="length-container">
+            <button class="decrease-button" id="decrease">−</button>
+            <input
+              type="number"
+              id="length"
+              class="length-input"
+              min="4"
+              max="32"
+              value="12"
+            />
+            <button class="increase-button" id="increase">+</button>
+          </div>
+        </div>
+
+        <div class="setting">
+          <label class="setting-label">Include Uppercase Letters</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="uppercase" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="setting">
+          <label class="setting-label">Include Lowercase Letters</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="lowercase" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="setting">
+          <label class="setting-label">Include Numbers</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="numbers" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="setting">
+          <label class="setting-label">Include Symbols</label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="symbols" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="strength-container">
+        <div class="strength-title">PASSWORD STRENGTH</div>
+        <div class="strength-meter">
+          <div id="strength-bar" class="strong"></div>
+        </div>
+        <div id="strength-text" class="strength-text" style="color: #2ed573">
+          STRONG
+        </div>
+      </div>
+
+      <button id="generate" class="generate-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        Generate Password
+      </button>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

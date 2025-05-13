@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bro Code</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="counter-wrap">
+      <h1>This is a test</h1>
+      <p class="counter">0</p>
+      <button class="descrease">Decrease</button>
+      <button class="reset">Reset</button>
+      <button class="increase">Increase</button>
+      <link rel="stylesheet" href="style.css" />
+    </div>
+    <div class="ifs">
+      <p class="out-put">This is the result</p>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inverted Border Radius</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      /* 
+      .inverted-border-radius {
+        width: 300px;
+        height: 400px;
+        background-color: black;
+        border-radius: 20px 20px 20px 0;
+        position: relative;
+      }
+
+      .inverted-border-radius::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        box-shadow: 10px 10px 0 0 #f0f0f0;
+      } */
+
+      .inverted-radius {
+        width: 300px;
+        height: 400px;
+        background-color: #222;
+        border-radius: 20px;
+        border: 1px solid green;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .inverted-radius::after {
+        content: "";
+        position: absolute;
+        bottom: -1px; /* Align exactly with the border */
+        right: -1px; /* Align exactly with the border */
+        width: 60px;
+        height: 60px;
+        background-color: #000; /* Match page background */
+        border-top-left-radius: 20px;
+        border: 1px solid green;
+        border-bottom: none;
+        border-right: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inverted-radius"></div>
+  </body>
+</html>

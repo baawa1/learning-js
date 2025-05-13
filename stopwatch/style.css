@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2a2a72, #009ffd);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.stopwatch-container {
+  position: relative;
+  width: 90%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.stopwatch-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  z-index: -1;
+}
+
+.time-display {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 15px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.time {
+  font-size: 3.5rem;
+  font-weight: 300;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  letter-spacing: 1px;
+}
+
+.milliseconds {
+  font-size: 1.8rem;
+  margin-left: 5px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.time-label {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.time-label span {
+  width: 60px;
+  text-align: center;
+}
+
+.time-label .ms-label {
+  width: 80px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 100px;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-start {
+  background: rgba(72, 219, 133, 0.3);
+}
+
+.btn-start:hover {
+  background: rgba(72, 219, 133, 0.5);
+}
+
+.btn-stop {
+  background: rgba(255, 107, 107, 0.3);
+}
+
+.btn-stop:hover {
+  background: rgba(255, 107, 107, 0.5);
+}
+
+.btn-reset {
+  background: rgba(93, 127, 255, 0.3);
+}
+
+.btn-reset:hover {
+  background: rgba(93, 127, 255, 0.5);
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+  .stopwatch-container {
+    padding: 30px 20px;
+  }
+
+  .time {
+    font-size: 2.5rem;
+  }
+
+  .milliseconds {
+    font-size: 1.4rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 80%;
+    padding: 10px;
+  }
+}
